@@ -1,0 +1,44 @@
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.exe.config
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.exe
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.pdb
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.csprojResolveAssemblyReference.cache
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Properties.Resources.resources
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.csproj.GenerateResource.Cache
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.exe
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.pdb
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.FrmMenu.resources
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Login.resources
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Cadastro.Equipamento.resources
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Cadastro.Militar.resources
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Movimento.Devolucao.resources
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Movimento.Emprestimo.resources
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Pesquisa.pEquipamento.resources
+E:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Pesquisa.pMilitar.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.exe.config
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.exe
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.pdb
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.csprojResolveAssemblyReference.cache
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Cadastro.Equipamento.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Cadastro.Militar.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Movimento.Devolucao.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Movimento.Emprestimo.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Pesquisa.pEquipamento.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Pesquisa.pMilitar.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.FrmMenu.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Login.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Properties.Resources.resources
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.csproj.GenerateResource.Cache
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.exe
+D:\Projetos\c#\Win Form\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.pdb
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.exe.config
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.exe
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\bin\Debug\Controle de Armas.pdb
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.csprojAssemblyReference.cache
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.FrmMenu.resources
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Login.resources
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Properties.Resources.resources
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.csproj.GenerateResource.cache
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.csproj.CoreCompileInputs.cache
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.exe
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle de Armas.pdb
+D:\Projetos\c#\Winform\Controle de Armas\Controle de Armas\obj\Debug\Controle_de_Armas.Forms.Movimento.frmSerializarXml.resources
