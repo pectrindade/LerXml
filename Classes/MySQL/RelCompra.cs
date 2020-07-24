@@ -76,6 +76,35 @@ namespace LerXML.Classes.MySQL
             return dr;
         }
 
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public static OleDbDataReader BuscaEmitente()
+        {
+
+            var db = new DBAcessOleDB();
+            string Mysql = "SELECT DISTINCT (EMICNPJ) AS CODEMITENTE, relbase.EMINOME AS NOMEEMITENTE ";
+            Mysql = Mysql + " FROM RelBase ";
+
+            db.CommandText = Mysql;
+
+            var dr = (OleDbDataReader)db.ExecuteReader();
+            return dr;
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public static OleDbDataReader BuscaDestinatario()
+        {
+
+            var db = new DBAcessOleDB();
+            string Mysql = "SELECT DISTINCT (DESTCNPJ) AS CODDESTINATARIO, relbase.DESTNOME AS NOMEDESTINATARIO ";
+            Mysql = Mysql + " FROM RelBase ";
+            Mysql = Mysql + " ORDER BY DESTCNPJ ";
+
+            db.CommandText = Mysql;
+
+            var dr = (OleDbDataReader)db.ExecuteReader();
+            return dr;
+        }
+
 
         public int InsertAccess_RelCompra(string numeronf, string dataemissao, string cnpj, string nomeempresa, string chave, string nomeproduto, string quantidade,
                                                 string valorunitario, string ncm)

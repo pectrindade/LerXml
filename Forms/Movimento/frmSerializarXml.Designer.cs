@@ -89,10 +89,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtChave = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtEmiNome = new System.Windows.Forms.TextBox();
-            this.txtDestNome = new System.Windows.Forms.TextBox();
-            this.btnBuscaEmi = new System.Windows.Forms.Button();
-            this.txtBuscaDest = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDestcnpj = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -122,6 +118,9 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.btnVenda = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.cmbEmitente = new System.Windows.Forms.ComboBox();
+            this.cmbDestinatario = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tbDestinatario.SuspendLayout();
             this.gbEnderecoDestinatario.SuspendLayout();
             this.gbEnderecoEmitente.SuspendLayout();
@@ -718,11 +717,11 @@
             // 
             this.btnLerXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLerXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLerXml.Image = global::LerXML.Properties.Resources.lupa;
             this.btnLerXml.Location = new System.Drawing.Point(420, 31);
             this.btnLerXml.Name = "btnLerXml";
             this.btnLerXml.Size = new System.Drawing.Size(32, 23);
             this.btnLerXml.TabIndex = 12;
-            this.btnLerXml.Text = "...";
             this.btnLerXml.UseVisualStyleBackColor = true;
             this.btnLerXml.Visible = false;
             this.btnLerXml.Click += new System.EventHandler(this.btnLerXml_Click);
@@ -739,12 +738,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.cmbDestinatario);
+            this.tabPage3.Controls.Add(this.cmbEmitente);
             this.tabPage3.Controls.Add(this.txtChave);
             this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.txtEmiNome);
-            this.tabPage3.Controls.Add(this.txtDestNome);
-            this.tabPage3.Controls.Add(this.btnBuscaEmi);
-            this.tabPage3.Controls.Add(this.txtBuscaDest);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.txtDestcnpj);
             this.tabPage3.Controls.Add(this.label4);
@@ -770,7 +767,7 @@
             // 
             this.txtChave.Location = new System.Drawing.Point(15, 153);
             this.txtChave.Name = "txtChave";
-            this.txtChave.Size = new System.Drawing.Size(237, 20);
+            this.txtChave.Size = new System.Drawing.Size(474, 20);
             this.txtChave.TabIndex = 44;
             // 
             // label6
@@ -778,61 +775,22 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(15, 134);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 45;
-            this.label6.Text = "NCM";
-            // 
-            // txtEmiNome
-            // 
-            this.txtEmiNome.Location = new System.Drawing.Point(183, 24);
-            this.txtEmiNome.Name = "txtEmiNome";
-            this.txtEmiNome.Size = new System.Drawing.Size(471, 20);
-            this.txtEmiNome.TabIndex = 43;
-            // 
-            // txtDestNome
-            // 
-            this.txtDestNome.Location = new System.Drawing.Point(183, 68);
-            this.txtDestNome.Name = "txtDestNome";
-            this.txtDestNome.Size = new System.Drawing.Size(471, 20);
-            this.txtDestNome.TabIndex = 42;
-            // 
-            // btnBuscaEmi
-            // 
-            this.btnBuscaEmi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaEmi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscaEmi.Image = global::LerXML.Properties.Resources.lupa;
-            this.btnBuscaEmi.Location = new System.Drawing.Point(145, 24);
-            this.btnBuscaEmi.Name = "btnBuscaEmi";
-            this.btnBuscaEmi.Size = new System.Drawing.Size(32, 19);
-            this.btnBuscaEmi.TabIndex = 41;
-            this.btnBuscaEmi.Text = "...";
-            this.btnBuscaEmi.UseVisualStyleBackColor = true;
-            this.btnBuscaEmi.Visible = false;
-            // 
-            // txtBuscaDest
-            // 
-            this.txtBuscaDest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtBuscaDest.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscaDest.Location = new System.Drawing.Point(145, 68);
-            this.txtBuscaDest.Name = "txtBuscaDest";
-            this.txtBuscaDest.Size = new System.Drawing.Size(32, 19);
-            this.txtBuscaDest.TabIndex = 40;
-            this.txtBuscaDest.Text = "...";
-            this.txtBuscaDest.UseVisualStyleBackColor = true;
-            this.txtBuscaDest.Visible = false;
+            this.label6.Text = "Chave";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(16, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 39;
-            this.label5.Text = "CNPJ Destinatário";
+            this.label5.Text = "Destinatário";
             // 
             // txtDestcnpj
             // 
-            this.txtDestcnpj.Location = new System.Drawing.Point(15, 67);
+            this.txtDestcnpj.Location = new System.Drawing.Point(331, 65);
             this.txtDestcnpj.Name = "txtDestcnpj";
             this.txtDestcnpj.Size = new System.Drawing.Size(124, 20);
             this.txtDestcnpj.TabIndex = 38;
@@ -888,13 +846,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 31;
-            this.label2.Text = "CNPJ Emitente";
+            this.label2.Text = "Emitente";
             // 
             // txtEmicnpj
             // 
-            this.txtEmicnpj.Location = new System.Drawing.Point(15, 24);
+            this.txtEmicnpj.Location = new System.Drawing.Point(331, 22);
             this.txtEmicnpj.Name = "txtEmicnpj";
             this.txtEmicnpj.Size = new System.Drawing.Size(124, 20);
             this.txtEmicnpj.TabIndex = 30;
@@ -1034,7 +992,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(762, 31);
+            this.button3.Location = new System.Drawing.Point(730, 29);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 19;
@@ -1042,11 +1000,42 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // cmbEmitente
+            // 
+            this.cmbEmitente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmitente.FormattingEnabled = true;
+            this.cmbEmitente.Location = new System.Drawing.Point(15, 21);
+            this.cmbEmitente.Name = "cmbEmitente";
+            this.cmbEmitente.Size = new System.Drawing.Size(474, 21);
+            this.cmbEmitente.TabIndex = 46;
+            this.cmbEmitente.SelectedValueChanged += new System.EventHandler(this.cmbEmitente_SelectedValueChanged);
+            // 
+            // cmbDestinatario
+            // 
+            this.cmbDestinatario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDestinatario.FormattingEnabled = true;
+            this.cmbDestinatario.Location = new System.Drawing.Point(15, 65);
+            this.cmbDestinatario.Name = "cmbDestinatario";
+            this.cmbDestinatario.Size = new System.Drawing.Size(474, 21);
+            this.cmbDestinatario.TabIndex = 47;
+            this.cmbDestinatario.SelectedValueChanged += new System.EventHandler(this.cmbDestinatario_SelectedValueChanged);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(894, 31);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "formload";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmSerializarXml
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 390);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnVenda);
             this.Controls.Add(this.tabControl2);
@@ -1173,9 +1162,8 @@
         private System.Windows.Forms.TextBox txtDestcnpj;
         private System.Windows.Forms.TextBox txtChave;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtEmiNome;
-        private System.Windows.Forms.TextBox txtDestNome;
-        private System.Windows.Forms.Button btnBuscaEmi;
-        private System.Windows.Forms.Button txtBuscaDest;
+        private System.Windows.Forms.ComboBox cmbEmitente;
+        private System.Windows.Forms.ComboBox cmbDestinatario;
+        private System.Windows.Forms.Button button2;
     }
 }

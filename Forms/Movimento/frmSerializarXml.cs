@@ -20,11 +20,11 @@ namespace LerXML.Forms.Movimento
             InitializeComponent();
         }
 
-
         private void frmSerializarXml_Load(object sender, EventArgs e)
         {
 
         }
+
         private void btnLerXml_Click(object sender, EventArgs e)
         {
             LerXml();
@@ -116,7 +116,6 @@ namespace LerXML.Forms.Movimento
             }
 
         }
-
 
         private void popularFormVenda(NFeProc nfe)
         {
@@ -231,6 +230,8 @@ namespace LerXML.Forms.Movimento
 
             }
             Base();
+            CarregaCmbEmitente();
+            CarregaCmbDestinatario();
 
         }
 
@@ -314,7 +315,76 @@ namespace LerXML.Forms.Movimento
             }
             MessageBox.Show("Arquivo xml da Nota Fiscal lido com Sucesso!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        
+
+        private void CarregaCmbEmitente()
+        {
+            string codigo;
+            string nome;
+
+
+            cmbEmitente.Items.Clear();
+
+            cmbEmitente.Items.Insert(0, "--SELECIONE--");
+
+            var dr = RelCompra.BuscaEmitente();
+
+            if (dr.HasRows)
+            {
+                var cont = 1;
+
+                while (dr.Read())
+                {
+
+                    codigo = dr.GetString(dr.GetOrdinal("CODEMITENTE"));
+                    nome = dr.GetString(dr.GetOrdinal("NOMEEMITENTE")) + " - " + codigo;
+
+                    cmbEmitente.Items.Insert(cont, nome);
+                    cont++;
+                }
+
+            }
+
+            dr.Close();
+            dr.Dispose();
+
+        }
+
+        private void CarregaCmbDestinatario()
+        {
+            string codigo = "";
+            string CodigoAnterior = "";
+            string nome;
+
+            cmbDestinatario.Items.Clear();
+
+            cmbDestinatario.Items.Insert(0, "--SELECIONE--");
+
+            var dr = RelCompra.BuscaDestinatario();
+
+            if (dr.HasRows)
+            {
+                var cont = 1;
+
+                while (dr.Read())
+                {
+                    codigo = dr.GetString(dr.GetOrdinal("CODDESTINATARIO"));
+
+                    if (CodigoAnterior != codigo)
+                    {
+                        nome = dr.GetString(dr.GetOrdinal("NOMEDESTINATARIO")) + " - " + codigo;
+                        cmbDestinatario.Items.Insert(cont, nome);
+                        cont++;
+                    }
+                    CodigoAnterior = dr.GetString(dr.GetOrdinal("CODDESTINATARIO"));
+                }
+
+            }
+
+            dr.Close();
+            dr.Dispose();
+
+        }
+
         private void Relatorio()
         {
 
@@ -380,6 +450,7 @@ namespace LerXML.Forms.Movimento
         private void button3_Click(object sender, EventArgs e)
         {
             Relatorio1();
+           
         }
 
         private void Relatorio1()
@@ -391,7 +462,7 @@ namespace LerXML.Forms.Movimento
             var dataemissao = "";
             var cnpj = "";
             var nomeempresa = "";
-            var chave = "";
+           
             var nomeproduto = "";
             var quantidade = "";
             var valorunitario = "";
@@ -401,8 +472,9 @@ namespace LerXML.Forms.Movimento
             var emicnpj = txtEmicnpj.Text.Trim();
             var destcnpj = txtDestcnpj.Text.Trim();
             var ncm = txtNcm.Text.Trim();
+            var chave = txtChave.Text.Trim();
 
-            if (txtDataInicial.Text.Trim() !="")
+            if (txtDataInicial.Text.Trim() != "")
             {
                 data = Convert.ToDateTime(txtDataInicial.Text.Trim());
             }
@@ -410,8 +482,8 @@ namespace LerXML.Forms.Movimento
             {
                 data = DateTime.Now;
             }
-           
-           
+
+
             ano = data.ToString("yyyy");
 
 
@@ -463,5 +535,36 @@ namespace LerXML.Forms.Movimento
 
         }
 
+        private void cmbEmitente_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbEmitente.Text != "--SELECIONE--")
+            {
+                var cnpjemitente = cmbEmitente.Text;
+                txtEmicnpj.Text = cnpjemitente.Substring(cnpjemitente.Length - 14, 14);
+            }
+            else
+            {
+                txtEmicnpj.Text = "";
+            }
+        }
+
+        private void cmbDestinatario_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbDestinatario.Text != "--SELECIONE--")
+            {
+                var cnpjdestinatario = cmbDestinatario.Text;
+                txtDestcnpj.Text = cnpjdestinatario.Substring(cnpjdestinatario.Length - 14, 14);
+            }
+            else
+            {
+                txtDestcnpj.Text = "";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CarregaCmbEmitente();
+            CarregaCmbDestinatario();
+        }
     }
 }

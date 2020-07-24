@@ -259,14 +259,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LerXML.exe" size="592832">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LerXML.exe" size="596416">
       <assemblyIdentity name="LerXML" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wYBXdHrayyXLfZcrfEZ6ArQk4ElFbGDVqsXl/+1kGQ0=</dsig:DigestValue>
+        <dsig:DigestValue>u/t4pZp1kzyf8lhTur9Z1dnZv7NgR8ZPzuwplfaV4UM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
