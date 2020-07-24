@@ -87,6 +87,12 @@
             this.btnCompra = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtChave = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEmiNome = new System.Windows.Forms.TextBox();
+            this.txtDestNome = new System.Windows.Forms.TextBox();
+            this.btnBuscaEmi = new System.Windows.Forms.Button();
+            this.txtBuscaDest = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDestcnpj = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -116,12 +122,6 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.btnVenda = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.txtBuscaDest = new System.Windows.Forms.Button();
-            this.txtDestNome = new System.Windows.Forms.TextBox();
-            this.txtEmiNome = new System.Windows.Forms.TextBox();
-            this.txtChave = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnBuscaEmi = new System.Windows.Forms.Button();
             this.tbDestinatario.SuspendLayout();
             this.gbEnderecoDestinatario.SuspendLayout();
             this.gbEnderecoEmitente.SuspendLayout();
@@ -766,6 +766,61 @@
             this.tabPage3.Text = "Relatório";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // txtChave
+            // 
+            this.txtChave.Location = new System.Drawing.Point(15, 153);
+            this.txtChave.Name = "txtChave";
+            this.txtChave.Size = new System.Drawing.Size(237, 20);
+            this.txtChave.TabIndex = 44;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 134);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "NCM";
+            // 
+            // txtEmiNome
+            // 
+            this.txtEmiNome.Location = new System.Drawing.Point(183, 24);
+            this.txtEmiNome.Name = "txtEmiNome";
+            this.txtEmiNome.Size = new System.Drawing.Size(471, 20);
+            this.txtEmiNome.TabIndex = 43;
+            // 
+            // txtDestNome
+            // 
+            this.txtDestNome.Location = new System.Drawing.Point(183, 68);
+            this.txtDestNome.Name = "txtDestNome";
+            this.txtDestNome.Size = new System.Drawing.Size(471, 20);
+            this.txtDestNome.TabIndex = 42;
+            // 
+            // btnBuscaEmi
+            // 
+            this.btnBuscaEmi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaEmi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscaEmi.Image = global::LerXML.Properties.Resources.lupa;
+            this.btnBuscaEmi.Location = new System.Drawing.Point(145, 24);
+            this.btnBuscaEmi.Name = "btnBuscaEmi";
+            this.btnBuscaEmi.Size = new System.Drawing.Size(32, 19);
+            this.btnBuscaEmi.TabIndex = 41;
+            this.btnBuscaEmi.Text = "...";
+            this.btnBuscaEmi.UseVisualStyleBackColor = true;
+            this.btnBuscaEmi.Visible = false;
+            // 
+            // txtBuscaDest
+            // 
+            this.txtBuscaDest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtBuscaDest.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscaDest.Location = new System.Drawing.Point(145, 68);
+            this.txtBuscaDest.Name = "txtBuscaDest";
+            this.txtBuscaDest.Size = new System.Drawing.Size(32, 19);
+            this.txtBuscaDest.TabIndex = 40;
+            this.txtBuscaDest.Text = "...";
+            this.txtBuscaDest.UseVisualStyleBackColor = true;
+            this.txtBuscaDest.Visible = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -979,68 +1034,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(703, 31);
+            this.button3.Location = new System.Drawing.Point(762, 31);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 19;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // txtBuscaDest
-            // 
-            this.txtBuscaDest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtBuscaDest.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscaDest.Location = new System.Drawing.Point(145, 68);
-            this.txtBuscaDest.Name = "txtBuscaDest";
-            this.txtBuscaDest.Size = new System.Drawing.Size(32, 19);
-            this.txtBuscaDest.TabIndex = 40;
-            this.txtBuscaDest.Text = "...";
-            this.txtBuscaDest.UseVisualStyleBackColor = true;
-            this.txtBuscaDest.Visible = false;
-            // 
-            // txtDestNome
-            // 
-            this.txtDestNome.Location = new System.Drawing.Point(183, 68);
-            this.txtDestNome.Name = "txtDestNome";
-            this.txtDestNome.Size = new System.Drawing.Size(471, 20);
-            this.txtDestNome.TabIndex = 42;
-            // 
-            // txtEmiNome
-            // 
-            this.txtEmiNome.Location = new System.Drawing.Point(183, 24);
-            this.txtEmiNome.Name = "txtEmiNome";
-            this.txtEmiNome.Size = new System.Drawing.Size(471, 20);
-            this.txtEmiNome.TabIndex = 43;
-            // 
-            // txtChave
-            // 
-            this.txtChave.Location = new System.Drawing.Point(15, 153);
-            this.txtChave.Name = "txtChave";
-            this.txtChave.Size = new System.Drawing.Size(237, 20);
-            this.txtChave.TabIndex = 44;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 134);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "NCM";
-            // 
-            // btnBuscaEmi
-            // 
-            this.btnBuscaEmi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaEmi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscaEmi.Image = global::LerXML.Properties.Resources.lupa;
-            this.btnBuscaEmi.Location = new System.Drawing.Point(145, 24);
-            this.btnBuscaEmi.Name = "btnBuscaEmi";
-            this.btnBuscaEmi.Size = new System.Drawing.Size(32, 19);
-            this.btnBuscaEmi.TabIndex = 41;
-            this.btnBuscaEmi.Text = "...";
-            this.btnBuscaEmi.UseVisualStyleBackColor = true;
-            this.btnBuscaEmi.Visible = false;
             // 
             // frmSerializarXml
             // 
