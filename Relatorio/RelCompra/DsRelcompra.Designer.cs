@@ -283,8 +283,6 @@ namespace LerXML.Relatorio.RelCompra {
             
             private global::System.Data.DataColumn columnDATAEMISSAO;
             
-            private global::System.Data.DataColumn columnCNPJ;
-            
             private global::System.Data.DataColumn columnCHAVE;
             
             private global::System.Data.DataColumn columnNOMEPRODUTO;
@@ -295,7 +293,17 @@ namespace LerXML.Relatorio.RelCompra {
             
             private global::System.Data.DataColumn columnNCM;
             
-            private global::System.Data.DataColumn columnNOMEEMPRESA;
+            private global::System.Data.DataColumn columnANO;
+            
+            private global::System.Data.DataColumn columnDATAEMISSAO1;
+            
+            private global::System.Data.DataColumn columnEMICNPJ;
+            
+            private global::System.Data.DataColumn columnEMINOME;
+            
+            private global::System.Data.DataColumn columnDESTCNPJ;
+            
+            private global::System.Data.DataColumn columnDESTNOME;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -348,14 +356,6 @@ namespace LerXML.Relatorio.RelCompra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CNPJColumn {
-                get {
-                    return this.columnCNPJ;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn CHAVEColumn {
                 get {
                     return this.columnCHAVE;
@@ -396,9 +396,49 @@ namespace LerXML.Relatorio.RelCompra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NOMEEMPRESAColumn {
+            public global::System.Data.DataColumn ANOColumn {
                 get {
-                    return this.columnNOMEEMPRESA;
+                    return this.columnANO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DATAEMISSAO1Column {
+                get {
+                    return this.columnDATAEMISSAO1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EMICNPJColumn {
+                get {
+                    return this.columnEMICNPJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EMINOMEColumn {
+                get {
+                    return this.columnEMINOME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DESTCNPJColumn {
+                get {
+                    return this.columnDESTCNPJ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DESTNOMEColumn {
+                get {
+                    return this.columnDESTNOME;
                 }
             }
             
@@ -439,18 +479,22 @@ namespace LerXML.Relatorio.RelCompra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public RelCompraRow AddRelCompraRow(string NUMERONF, string DATAEMISSAO, string CNPJ, string CHAVE, string NOMEPRODUTO, string QUANTIDADE, string VALORUNITARIO, string NCM, string NOMEEMPRESA) {
+            public RelCompraRow AddRelCompraRow(string NUMERONF, string DATAEMISSAO, string CHAVE, string NOMEPRODUTO, string QUANTIDADE, string VALORUNITARIO, string NCM, string ANO, System.DateTime DATAEMISSAO1, string EMICNPJ, string EMINOME, string DESTCNPJ, string DESTNOME) {
                 RelCompraRow rowRelCompraRow = ((RelCompraRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NUMERONF,
                         DATAEMISSAO,
-                        CNPJ,
                         CHAVE,
                         NOMEPRODUTO,
                         QUANTIDADE,
                         VALORUNITARIO,
                         NCM,
-                        NOMEEMPRESA};
+                        ANO,
+                        DATAEMISSAO1,
+                        EMICNPJ,
+                        EMINOME,
+                        DESTCNPJ,
+                        DESTNOME};
                 rowRelCompraRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRelCompraRow);
                 return rowRelCompraRow;
@@ -475,13 +519,17 @@ namespace LerXML.Relatorio.RelCompra {
             internal void InitVars() {
                 this.columnNUMERONF = base.Columns["NUMERONF"];
                 this.columnDATAEMISSAO = base.Columns["DATAEMISSAO"];
-                this.columnCNPJ = base.Columns["CNPJ"];
                 this.columnCHAVE = base.Columns["CHAVE"];
                 this.columnNOMEPRODUTO = base.Columns["NOMEPRODUTO"];
                 this.columnQUANTIDADE = base.Columns["QUANTIDADE"];
                 this.columnVALORUNITARIO = base.Columns["VALORUNITARIO"];
                 this.columnNCM = base.Columns["NCM"];
-                this.columnNOMEEMPRESA = base.Columns["NOMEEMPRESA"];
+                this.columnANO = base.Columns["ANO"];
+                this.columnDATAEMISSAO1 = base.Columns["DATAEMISSAO1"];
+                this.columnEMICNPJ = base.Columns["EMICNPJ"];
+                this.columnEMINOME = base.Columns["EMINOME"];
+                this.columnDESTCNPJ = base.Columns["DESTCNPJ"];
+                this.columnDESTNOME = base.Columns["DESTNOME"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,8 +539,6 @@ namespace LerXML.Relatorio.RelCompra {
                 base.Columns.Add(this.columnNUMERONF);
                 this.columnDATAEMISSAO = new global::System.Data.DataColumn("DATAEMISSAO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDATAEMISSAO);
-                this.columnCNPJ = new global::System.Data.DataColumn("CNPJ", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCNPJ);
                 this.columnCHAVE = new global::System.Data.DataColumn("CHAVE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCHAVE);
                 this.columnNOMEPRODUTO = new global::System.Data.DataColumn("NOMEPRODUTO", typeof(string), null, global::System.Data.MappingType.Element);
@@ -503,17 +549,31 @@ namespace LerXML.Relatorio.RelCompra {
                 base.Columns.Add(this.columnVALORUNITARIO);
                 this.columnNCM = new global::System.Data.DataColumn("NCM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNCM);
-                this.columnNOMEEMPRESA = new global::System.Data.DataColumn("NOMEEMPRESA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOMEEMPRESA);
+                this.columnANO = new global::System.Data.DataColumn("ANO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnANO);
+                this.columnDATAEMISSAO1 = new global::System.Data.DataColumn("DATAEMISSAO1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATAEMISSAO1);
+                this.columnEMICNPJ = new global::System.Data.DataColumn("EMICNPJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEMICNPJ);
+                this.columnEMINOME = new global::System.Data.DataColumn("EMINOME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEMINOME);
+                this.columnDESTCNPJ = new global::System.Data.DataColumn("DESTCNPJ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESTCNPJ);
+                this.columnDESTNOME = new global::System.Data.DataColumn("DESTNOME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESTNOME);
                 this.columnNUMERONF.MaxLength = 10;
                 this.columnDATAEMISSAO.MaxLength = 20;
-                this.columnCNPJ.MaxLength = 20;
                 this.columnCHAVE.MaxLength = 200;
                 this.columnNOMEPRODUTO.MaxLength = 200;
                 this.columnQUANTIDADE.MaxLength = 20;
                 this.columnVALORUNITARIO.MaxLength = 20;
                 this.columnNCM.MaxLength = 50;
-                this.columnNOMEEMPRESA.MaxLength = 255;
+                this.columnANO.MaxLength = 4;
+                this.columnDATAEMISSAO1.Caption = "DATAEMISSAO";
+                this.columnEMICNPJ.MaxLength = 20;
+                this.columnEMINOME.MaxLength = 255;
+                this.columnDESTCNPJ.MaxLength = 20;
+                this.columnDESTNOME.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -688,22 +748,6 @@ namespace LerXML.Relatorio.RelCompra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CNPJ {
-                get {
-                    try {
-                        return ((string)(this[this.tableRelCompra.CNPJColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'CNPJ\' na tabela \'RelCompra\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableRelCompra.CNPJColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CHAVE {
                 get {
                     try {
@@ -784,17 +828,97 @@ namespace LerXML.Relatorio.RelCompra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string NOMEEMPRESA {
+            public string ANO {
                 get {
                     try {
-                        return ((string)(this[this.tableRelCompra.NOMEEMPRESAColumn]));
+                        return ((string)(this[this.tableRelCompra.ANOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'NOMEEMPRESA\' na tabela \'RelCompra\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'ANO\' na tabela \'RelCompra\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRelCompra.NOMEEMPRESAColumn] = value;
+                    this[this.tableRelCompra.ANOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime DATAEMISSAO1 {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableRelCompra.DATAEMISSAO1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'DATAEMISSAO1\' na tabela \'RelCompra\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRelCompra.DATAEMISSAO1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string EMICNPJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableRelCompra.EMICNPJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'EMICNPJ\' na tabela \'RelCompra\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRelCompra.EMICNPJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string EMINOME {
+                get {
+                    try {
+                        return ((string)(this[this.tableRelCompra.EMINOMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'EMINOME\' na tabela \'RelCompra\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRelCompra.EMINOMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DESTCNPJ {
+                get {
+                    try {
+                        return ((string)(this[this.tableRelCompra.DESTCNPJColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'DESTCNPJ\' na tabela \'RelCompra\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRelCompra.DESTCNPJColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DESTNOME {
+                get {
+                    try {
+                        return ((string)(this[this.tableRelCompra.DESTNOMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'DESTNOME\' na tabela \'RelCompra\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRelCompra.DESTNOMEColumn] = value;
                 }
             }
             
@@ -820,18 +944,6 @@ namespace LerXML.Relatorio.RelCompra {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDATAEMISSAONull() {
                 this[this.tableRelCompra.DATAEMISSAOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCNPJNull() {
-                return this.IsNull(this.tableRelCompra.CNPJColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCNPJNull() {
-                this[this.tableRelCompra.CNPJColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -896,14 +1008,74 @@ namespace LerXML.Relatorio.RelCompra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNOMEEMPRESANull() {
-                return this.IsNull(this.tableRelCompra.NOMEEMPRESAColumn);
+            public bool IsANONull() {
+                return this.IsNull(this.tableRelCompra.ANOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNOMEEMPRESANull() {
-                this[this.tableRelCompra.NOMEEMPRESAColumn] = global::System.Convert.DBNull;
+            public void SetANONull() {
+                this[this.tableRelCompra.ANOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDATAEMISSAO1Null() {
+                return this.IsNull(this.tableRelCompra.DATAEMISSAO1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDATAEMISSAO1Null() {
+                this[this.tableRelCompra.DATAEMISSAO1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEMICNPJNull() {
+                return this.IsNull(this.tableRelCompra.EMICNPJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEMICNPJNull() {
+                this[this.tableRelCompra.EMICNPJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEMINOMENull() {
+                return this.IsNull(this.tableRelCompra.EMINOMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEMINOMENull() {
+                this[this.tableRelCompra.EMINOMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDESTCNPJNull() {
+                return this.IsNull(this.tableRelCompra.DESTCNPJColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDESTCNPJNull() {
+                this[this.tableRelCompra.DESTCNPJColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDESTNOMENull() {
+                return this.IsNull(this.tableRelCompra.DESTNOMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDESTNOMENull() {
+                this[this.tableRelCompra.DESTNOMEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1067,25 +1239,31 @@ namespace LerXML.Relatorio.RelCompra.DsRelcompraTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "RelCompra";
             tableMapping.ColumnMappings.Add("NUMERONF", "NUMERONF");
-            tableMapping.ColumnMappings.Add("DATAEMISSAO", "DATAEMISSAO");
-            tableMapping.ColumnMappings.Add("CNPJ", "CNPJ");
             tableMapping.ColumnMappings.Add("CHAVE", "CHAVE");
             tableMapping.ColumnMappings.Add("NOMEPRODUTO", "NOMEPRODUTO");
             tableMapping.ColumnMappings.Add("QUANTIDADE", "QUANTIDADE");
             tableMapping.ColumnMappings.Add("VALORUNITARIO", "VALORUNITARIO");
             tableMapping.ColumnMappings.Add("NCM", "NCM");
-            tableMapping.ColumnMappings.Add("NOMEEMPRESA", "NOMEEMPRESA");
+            tableMapping.ColumnMappings.Add("ANO", "ANO");
+            tableMapping.ColumnMappings.Add("DATAEMISSAO", "DATAEMISSAO1");
+            tableMapping.ColumnMappings.Add("EMICNPJ", "EMICNPJ");
+            tableMapping.ColumnMappings.Add("EMINOME", "EMINOME");
+            tableMapping.ColumnMappings.Add("DESTCNPJ", "DESTCNPJ");
+            tableMapping.ColumnMappings.Add("DESTNOME", "DESTNOME");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `RelCompra` (`NUMERONF`, `DATAEMISSAO`, `CNPJ`, `NOMEEMPRESA`, `CHAVE" +
-                "`, `NOMEPRODUTO`, `QUANTIDADE`, `VALORUNITARIO`, `NCM`) VALUES (?, ?, ?, ?, ?, ?" +
-                ", ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `RelCompra` (`ANO`, `NUMERONF`, `DATAEMISSAO`, `EMICNPJ`, `EMINOME`, " +
+                "`DESTCNPJ`, `DESTNOME`, `CHAVE`, `NOMEPRODUTO`, `QUANTIDADE`, `VALORUNITARIO`, `" +
+                "NCM`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ANO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ANO", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NUMERONF", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NUMERONF", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DATAEMISSAO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DATAEMISSAO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CNPJ", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CNPJ", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NOMEEMPRESA", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NOMEEMPRESA", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DATAEMISSAO", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DATAEMISSAO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EMICNPJ", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMICNPJ", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EMINOME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMINOME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DESTCNPJ", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DESTCNPJ", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DESTNOME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DESTNOME", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CHAVE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CHAVE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NOMEPRODUTO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NOMEPRODUTO", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("QUANTIDADE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "QUANTIDADE", global::System.Data.DataRowVersion.Current, false, null));
@@ -1097,7 +1275,7 @@ namespace LerXML.Relatorio.RelCompra.DsRelcompraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::LerXML.Properties.Settings.Default.LerXMLConnectionString1;
+            this._connection.ConnectionString = global::LerXML.Properties.Settings.Default.LerXMLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1106,8 +1284,8 @@ namespace LerXML.Relatorio.RelCompra.DsRelcompraTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        NUMERONF, DATAEMISSAO, CNPJ, NOMEEMPRESA, CHAVE, NOMEPRODUTO, QUANT" +
-                "IDADE, VALORUNITARIO, NCM\r\nFROM            RelCompra";
+            this._commandCollection[0].CommandText = "SELECT        ANO, NUMERONF, DATAEMISSAO, EMICNPJ, EMINOME, DESTCNPJ, DESTNOME, C" +
+                "HAVE, NOMEPRODUTO, QUANTIDADE, VALORUNITARIO, NCM\r\nFROM            RelCompra";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1168,60 +1346,78 @@ namespace LerXML.Relatorio.RelCompra.DsRelcompraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NUMERONF, string DATAEMISSAO, string CNPJ, string NOMEEMPRESA, string CHAVE, string NOMEPRODUTO, string QUANTIDADE, string VALORUNITARIO, string NCM) {
-            if ((NUMERONF == null)) {
+        public virtual int Insert(string ANO, string NUMERONF, global::System.Nullable<global::System.DateTime> DATAEMISSAO, string EMICNPJ, string EMINOME, string DESTCNPJ, string DESTNOME, string CHAVE, string NOMEPRODUTO, string QUANTIDADE, string VALORUNITARIO, string NCM) {
+            if ((ANO == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(NUMERONF));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ANO));
             }
-            if ((DATAEMISSAO == null)) {
+            if ((NUMERONF == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DATAEMISSAO));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(NUMERONF));
             }
-            if ((CNPJ == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((DATAEMISSAO.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DATAEMISSAO.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CNPJ));
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((NOMEEMPRESA == null)) {
+            if ((EMICNPJ == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(NOMEEMPRESA));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(EMICNPJ));
             }
-            if ((CHAVE == null)) {
+            if ((EMINOME == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CHAVE));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(EMINOME));
             }
-            if ((NOMEPRODUTO == null)) {
+            if ((DESTCNPJ == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(NOMEPRODUTO));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(DESTCNPJ));
             }
-            if ((QUANTIDADE == null)) {
+            if ((DESTNOME == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(QUANTIDADE));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(DESTNOME));
             }
-            if ((VALORUNITARIO == null)) {
+            if ((CHAVE == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(VALORUNITARIO));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(CHAVE));
             }
-            if ((NCM == null)) {
+            if ((NOMEPRODUTO == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(NCM));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(NOMEPRODUTO));
+            }
+            if ((QUANTIDADE == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(QUANTIDADE));
+            }
+            if ((VALORUNITARIO == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(VALORUNITARIO));
+            }
+            if ((NCM == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(NCM));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

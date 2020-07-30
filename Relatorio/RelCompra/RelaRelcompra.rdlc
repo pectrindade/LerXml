@@ -33,7 +33,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox24">
+                    <Textbox Name="Textbox4">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -47,7 +47,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox24</rd:DefaultName>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -463,7 +463,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="NCM1">
+                    <Textbox Name="NCM">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -477,7 +477,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>NCM1</rd:DefaultName>
+                      <rd:DefaultName>NCM</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -870,7 +870,7 @@
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!CNPJ.Value</Value>
+                  <Value>=Fields!EMICNPJ.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -984,10 +984,6 @@
           <DataField>DATAEMISSAO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CNPJ">
-          <DataField>CNPJ</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="CHAVE">
           <DataField>CHAVE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -1008,8 +1004,28 @@
           <DataField>NCM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="NOMEEMPRESA">
-          <DataField>NOMEEMPRESA</DataField>
+        <Field Name="ANO">
+          <DataField>ANO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DATAEMISSAO1">
+          <DataField>DATAEMISSAO</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EMICNPJ">
+          <DataField>EMICNPJ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EMINOME">
+          <DataField>EMINOME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DESTCNPJ">
+          <DataField>DESTCNPJ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DESTNOME">
+          <DataField>DESTNOME</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

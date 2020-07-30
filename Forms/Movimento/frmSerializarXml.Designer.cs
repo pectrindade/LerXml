@@ -87,6 +87,8 @@
             this.btnCompra = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cmbDestinatario = new System.Windows.Forms.ComboBox();
+            this.cmbEmitente = new System.Windows.Forms.ComboBox();
             this.txtChave = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -116,11 +118,13 @@
             this.DestCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DestNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.btnVenda = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.cmbEmitente = new System.Windows.Forms.ComboBox();
-            this.cmbDestinatario = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.PnEmitente = new System.Windows.Forms.Panel();
+            this.PnDestinatario = new System.Windows.Forms.Panel();
+            this.PnNCM = new System.Windows.Forms.Panel();
+            this.PnChave = new System.Windows.Forms.Panel();
+            this.CmbSeleciona = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tbDestinatario.SuspendLayout();
             this.gbEnderecoDestinatario.SuspendLayout();
             this.gbEnderecoEmitente.SuspendLayout();
@@ -131,6 +135,10 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tabControl2.SuspendLayout();
+            this.PnEmitente.SuspendLayout();
+            this.PnDestinatario.SuspendLayout();
+            this.PnNCM.SuspendLayout();
+            this.PnChave.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbDestinatario
@@ -732,40 +740,57 @@
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Size = new System.Drawing.Size(75, 23);
             this.btnCompra.TabIndex = 15;
-            this.btnCompra.Text = "Compra";
+            this.btnCompra.Text = "Arquivos";
             this.btnCompra.UseVisualStyleBackColor = true;
             this.btnCompra.Click += new System.EventHandler(this.btnbusca_Click);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.cmbDestinatario);
-            this.tabPage3.Controls.Add(this.cmbEmitente);
-            this.tabPage3.Controls.Add(this.txtChave);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.txtDestcnpj);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.CmbSeleciona);
+            this.tabPage3.Controls.Add(this.PnChave);
+            this.tabPage3.Controls.Add(this.PnNCM);
+            this.tabPage3.Controls.Add(this.PnDestinatario);
+            this.tabPage3.Controls.Add(this.PnEmitente);
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.dateTimePicker2);
             this.tabPage3.Controls.Add(this.txtDataFinal);
             this.tabPage3.Controls.Add(this.dateTimePicker1);
             this.tabPage3.Controls.Add(this.txtDataInicial);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.txtEmicnpj);
-            this.tabPage3.Controls.Add(this.txtNcm);
-            this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1223, 292);
+            this.tabPage3.Size = new System.Drawing.Size(1223, 330);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Relatório";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // cmbDestinatario
+            // 
+            this.cmbDestinatario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDestinatario.FormattingEnabled = true;
+            this.cmbDestinatario.Location = new System.Drawing.Point(3, 18);
+            this.cmbDestinatario.Name = "cmbDestinatario";
+            this.cmbDestinatario.Size = new System.Drawing.Size(474, 21);
+            this.cmbDestinatario.TabIndex = 47;
+            this.cmbDestinatario.SelectedValueChanged += new System.EventHandler(this.cmbDestinatario_SelectedValueChanged);
+            // 
+            // cmbEmitente
+            // 
+            this.cmbEmitente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmitente.FormattingEnabled = true;
+            this.cmbEmitente.Location = new System.Drawing.Point(3, 21);
+            this.cmbEmitente.Name = "cmbEmitente";
+            this.cmbEmitente.Size = new System.Drawing.Size(474, 21);
+            this.cmbEmitente.TabIndex = 46;
+            this.cmbEmitente.SelectedValueChanged += new System.EventHandler(this.cmbEmitente_SelectedValueChanged);
             // 
             // txtChave
             // 
-            this.txtChave.Location = new System.Drawing.Point(15, 153);
+            this.txtChave.Location = new System.Drawing.Point(3, 22);
             this.txtChave.Name = "txtChave";
             this.txtChave.Size = new System.Drawing.Size(474, 20);
             this.txtChave.TabIndex = 44;
@@ -773,7 +798,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 134);
+            this.label6.Location = new System.Drawing.Point(3, 3);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 45;
@@ -782,7 +807,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 48);
+            this.label5.Location = new System.Drawing.Point(4, 1);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 39;
@@ -790,7 +815,7 @@
             // 
             // txtDestcnpj
             // 
-            this.txtDestcnpj.Location = new System.Drawing.Point(331, 65);
+            this.txtDestcnpj.Location = new System.Drawing.Point(319, 18);
             this.txtDestcnpj.Name = "txtDestcnpj";
             this.txtDestcnpj.Size = new System.Drawing.Size(124, 20);
             this.txtDestcnpj.TabIndex = 38;
@@ -798,7 +823,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 180);
+            this.label4.Location = new System.Drawing.Point(12, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 37;
@@ -807,7 +832,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(197, 180);
+            this.label3.Location = new System.Drawing.Point(197, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 36;
@@ -815,36 +840,40 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(294, 196);
+            this.dateTimePicker2.Location = new System.Drawing.Point(291, 267);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(21, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(22, 20);
             this.dateTimePicker2.TabIndex = 35;
             // 
             // txtDataFinal
             // 
-            this.txtDataFinal.Location = new System.Drawing.Point(195, 196);
+            this.txtDataFinal.Location = new System.Drawing.Point(195, 267);
+            this.txtDataFinal.Mask = "00/00/0000";
             this.txtDataFinal.Name = "txtDataFinal";
             this.txtDataFinal.Size = new System.Drawing.Size(100, 20);
             this.txtDataFinal.TabIndex = 34;
+            this.txtDataFinal.ValidatingType = typeof(System.DateTime);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 196);
+            this.dateTimePicker1.Location = new System.Drawing.Point(110, 267);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(21, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(22, 20);
             this.dateTimePicker1.TabIndex = 33;
             // 
             // txtDataInicial
             // 
-            this.txtDataInicial.Location = new System.Drawing.Point(15, 196);
+            this.txtDataInicial.Location = new System.Drawing.Point(15, 267);
+            this.txtDataInicial.Mask = "00/00/0000";
             this.txtDataInicial.Name = "txtDataInicial";
             this.txtDataInicial.Size = new System.Drawing.Size(100, 20);
             this.txtDataInicial.TabIndex = 32;
+            this.txtDataInicial.ValidatingType = typeof(System.DateTime);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 5);
+            this.label2.Location = new System.Drawing.Point(3, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 31;
@@ -852,14 +881,14 @@
             // 
             // txtEmicnpj
             // 
-            this.txtEmicnpj.Location = new System.Drawing.Point(331, 22);
+            this.txtEmicnpj.Location = new System.Drawing.Point(302, 21);
             this.txtEmicnpj.Name = "txtEmicnpj";
             this.txtEmicnpj.Size = new System.Drawing.Size(124, 20);
             this.txtEmicnpj.TabIndex = 30;
             // 
             // txtNcm
             // 
-            this.txtNcm.Location = new System.Drawing.Point(15, 110);
+            this.txtNcm.Location = new System.Drawing.Point(3, 22);
             this.txtNcm.Name = "txtNcm";
             this.txtNcm.Size = new System.Drawing.Size(195, 20);
             this.txtNcm.TabIndex = 28;
@@ -867,7 +896,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 91);
+            this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 29;
@@ -875,7 +904,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(19, 263);
+            this.button1.Location = new System.Drawing.Point(19, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(300, 23);
             this.button1.TabIndex = 27;
@@ -889,7 +918,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1223, 292);
+            this.tabPage2.Size = new System.Drawing.Size(1223, 330);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Lista";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -978,51 +1007,12 @@
             this.tabControl2.Location = new System.Drawing.Point(12, 60);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1231, 318);
+            this.tabControl2.Size = new System.Drawing.Size(1231, 356);
             this.tabControl2.TabIndex = 17;
-            // 
-            // btnVenda
-            // 
-            this.btnVenda.Location = new System.Drawing.Point(595, 29);
-            this.btnVenda.Name = "btnVenda";
-            this.btnVenda.Size = new System.Drawing.Size(75, 23);
-            this.btnVenda.TabIndex = 18;
-            this.btnVenda.Text = "Venda";
-            this.btnVenda.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(730, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // cmbEmitente
-            // 
-            this.cmbEmitente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmitente.FormattingEnabled = true;
-            this.cmbEmitente.Location = new System.Drawing.Point(15, 21);
-            this.cmbEmitente.Name = "cmbEmitente";
-            this.cmbEmitente.Size = new System.Drawing.Size(474, 21);
-            this.cmbEmitente.TabIndex = 46;
-            this.cmbEmitente.SelectedValueChanged += new System.EventHandler(this.cmbEmitente_SelectedValueChanged);
-            // 
-            // cmbDestinatario
-            // 
-            this.cmbDestinatario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDestinatario.FormattingEnabled = true;
-            this.cmbDestinatario.Location = new System.Drawing.Point(15, 65);
-            this.cmbDestinatario.Name = "cmbDestinatario";
-            this.cmbDestinatario.Size = new System.Drawing.Size(474, 21);
-            this.cmbDestinatario.TabIndex = 47;
-            this.cmbDestinatario.SelectedValueChanged += new System.EventHandler(this.cmbDestinatario_SelectedValueChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(894, 31);
+            this.button2.Location = new System.Drawing.Point(847, 29);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 20;
@@ -1030,14 +1020,79 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // PnEmitente
+            // 
+            this.PnEmitente.Controls.Add(this.cmbEmitente);
+            this.PnEmitente.Controls.Add(this.label2);
+            this.PnEmitente.Controls.Add(this.txtEmicnpj);
+            this.PnEmitente.Enabled = false;
+            this.PnEmitente.Location = new System.Drawing.Point(13, 53);
+            this.PnEmitente.Name = "PnEmitente";
+            this.PnEmitente.Size = new System.Drawing.Size(591, 45);
+            this.PnEmitente.TabIndex = 48;
+            // 
+            // PnDestinatario
+            // 
+            this.PnDestinatario.Controls.Add(this.cmbDestinatario);
+            this.PnDestinatario.Controls.Add(this.txtDestcnpj);
+            this.PnDestinatario.Controls.Add(this.label5);
+            this.PnDestinatario.Enabled = false;
+            this.PnDestinatario.Location = new System.Drawing.Point(12, 102);
+            this.PnDestinatario.Name = "PnDestinatario";
+            this.PnDestinatario.Size = new System.Drawing.Size(591, 45);
+            this.PnDestinatario.TabIndex = 49;
+            // 
+            // PnNCM
+            // 
+            this.PnNCM.Controls.Add(this.txtNcm);
+            this.PnNCM.Controls.Add(this.label1);
+            this.PnNCM.Enabled = false;
+            this.PnNCM.Location = new System.Drawing.Point(13, 152);
+            this.PnNCM.Name = "PnNCM";
+            this.PnNCM.Size = new System.Drawing.Size(591, 45);
+            this.PnNCM.TabIndex = 50;
+            // 
+            // PnChave
+            // 
+            this.PnChave.Controls.Add(this.txtChave);
+            this.PnChave.Controls.Add(this.label6);
+            this.PnChave.Enabled = false;
+            this.PnChave.Location = new System.Drawing.Point(13, 200);
+            this.PnChave.Name = "PnChave";
+            this.PnChave.Size = new System.Drawing.Size(591, 45);
+            this.PnChave.TabIndex = 51;
+            // 
+            // CmbSeleciona
+            // 
+            this.CmbSeleciona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbSeleciona.FormattingEnabled = true;
+            this.CmbSeleciona.Items.AddRange(new object[] {
+            "--SELECIONE--",
+            "Emitente",
+            "Destinatario",
+            "NCM",
+            "Chave"});
+            this.CmbSeleciona.Location = new System.Drawing.Point(15, 26);
+            this.CmbSeleciona.Name = "CmbSeleciona";
+            this.CmbSeleciona.Size = new System.Drawing.Size(474, 21);
+            this.CmbSeleciona.TabIndex = 52;
+            this.CmbSeleciona.TextChanged += new System.EventHandler(this.CmbSeleciona_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "Selecionar Por";
+            // 
             // frmSerializarXml
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1249, 390);
+            this.ClientSize = new System.Drawing.Size(1249, 422);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnVenda);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.btnCompra);
             this.Controls.Add(this.lblArquivoXml);
@@ -1066,6 +1121,14 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabControl2.ResumeLayout(false);
+            this.PnEmitente.ResumeLayout(false);
+            this.PnEmitente.PerformLayout();
+            this.PnDestinatario.ResumeLayout(false);
+            this.PnDestinatario.PerformLayout();
+            this.PnNCM.ResumeLayout(false);
+            this.PnNCM.PerformLayout();
+            this.PnChave.ResumeLayout(false);
+            this.PnChave.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1145,7 +1208,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.Button btnVenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn nfe;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtemissao;
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpj;
@@ -1157,7 +1219,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeempresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn DestCPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn DestNome;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDestcnpj;
         private System.Windows.Forms.TextBox txtChave;
@@ -1165,5 +1226,11 @@
         private System.Windows.Forms.ComboBox cmbEmitente;
         private System.Windows.Forms.ComboBox cmbDestinatario;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel PnChave;
+        private System.Windows.Forms.Panel PnNCM;
+        private System.Windows.Forms.Panel PnDestinatario;
+        private System.Windows.Forms.Panel PnEmitente;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox CmbSeleciona;
     }
 }

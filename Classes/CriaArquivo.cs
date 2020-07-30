@@ -83,10 +83,13 @@ namespace LerXML.Classes
 
             var Mysql = "CREATE TABLE " + tableName + "( ";
 
+            Mysql = Mysql + " [ANO] varchar(4), ";
             Mysql = Mysql + " [NUMERONF] varchar(10), ";
-            Mysql = Mysql + " [DATAEMISSAO]  varchar(20), ";
-            Mysql = Mysql + " [CNPJ]  varchar(20), ";
-            Mysql = Mysql + " [NOMEEMPRESA]  varchar(255), ";
+            Mysql = Mysql + " [DATAEMISSAO]  DATETIME, ";
+            Mysql = Mysql + " [EMICNPJ]  varchar(20), ";
+            Mysql = Mysql + " [EMINOME]  varchar(255), ";
+            Mysql = Mysql + " [DESTCNPJ]  varchar(20), ";
+            Mysql = Mysql + " [DESTNOME]  varchar(255), ";
             Mysql = Mysql + " [CHAVE]  varchar(200), ";
             Mysql = Mysql + " [NOMEPRODUTO]  varchar(200), ";
             Mysql = Mysql + " [QUANTIDADE]  varchar(20), ";

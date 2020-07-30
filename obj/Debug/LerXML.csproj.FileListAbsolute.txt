@@ -256,3 +256,7 @@ D:\Projetos\c#\Winform\LerXml\LerXML\obj\Debug\LerXML.csproj.CopyComplete
 D:\Projetos\c#\Winform\LerXml\LerXML\obj\Debug\LerXML.Registra.resources
 D:\Projetos\c#\Winform\LerXml\LerXML\obj\Debug\LerXML.Senha.resources
 D:\Projetos\c#\Winform\LerXml\LerXML\obj\Debug\LerXML.Forms.Espera.resources
+D:\Projetos\c#\Winform\LerXml\LerXML\obj\Debug\LerXML.Relatorio.Chave.RelChave.resources
+D:\Projetos\c#\Winform\LerXml\LerXML\obj\Debug\LerXML.Relatorio.Destinatario.RelDestinatario.resources
+D:\Projetos\c#\Winform\LerXml\LerXML\obj\Debug\LerXML.Relatorio.Emitente.RelEmitente.resources
+D:\Projetos\c#\Winform\LerXml\LerXML\obj\Debug\LerXML.Relatorio.NCM.RelNCM.resources

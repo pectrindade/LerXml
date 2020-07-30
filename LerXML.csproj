@@ -176,6 +176,40 @@
       <DependentUpon>RelaRelCompra.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Relatorio\Chave\RelChave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\Chave\RelChave.Designer.cs">
+      <DependentUpon>RelChave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\Destinatario\DsDestinatario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsDestinatario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\Destinatario\RelDestinatario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\Destinatario\RelDestinatario.Designer.cs">
+      <DependentUpon>RelDestinatario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\Emitente\DsEmitente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsEmitente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\Emitente\RelEmitente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\Emitente\RelEmitente.Designer.cs">
+      <DependentUpon>RelEmitente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\NCM\RelNCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\NCM\RelNCM.Designer.cs">
+      <DependentUpon>RelNCM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Relatorio\RelCompra\DsRelcompra.cs">
       <DependentUpon>DsRelcompra.xsd</DependentUpon>
     </Compile>
@@ -227,6 +261,20 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RelaRelCompra.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\Chave\RelChave.resx">
+      <DependentUpon>RelChave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\Destinatario\RelDestinatario.rdlc" />
+    <EmbeddedResource Include="Relatorio\Destinatario\RelDestinatario.resx">
+      <DependentUpon>RelDestinatario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\Emitente\RelEmitente.rdlc" />
+    <EmbeddedResource Include="Relatorio\Emitente\RelEmitente.resx">
+      <DependentUpon>RelEmitente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\NCM\RelNCM.resx">
+      <DependentUpon>RelNCM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\RelCompra\FRelcompra.resx">
       <DependentUpon>FRelcompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +293,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Relatorio\Destinatario\DsDestinatario.xsc">
+      <DependentUpon>DsDestinatario.xsd</DependentUpon>
+    </None>
+    <None Include="Relatorio\Destinatario\DsDestinatario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsDestinatario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Relatorio\Destinatario\DsDestinatario.xss">
+      <DependentUpon>DsDestinatario.xsd</DependentUpon>
+    </None>
+    <None Include="Relatorio\Emitente\DsEmitente.xsc">
+      <DependentUpon>DsEmitente.xsd</DependentUpon>
+    </None>
+    <None Include="Relatorio\Emitente\DsEmitente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsEmitente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Relatorio\Emitente\DsEmitente.xss">
+      <DependentUpon>DsEmitente.xsd</DependentUpon>
+    </None>
     <None Include="Relatorio\RelCompra\DsRelcompra.xsc">
       <DependentUpon>DsRelcompra.xsd</DependentUpon>
     </None>

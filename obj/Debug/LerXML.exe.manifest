@@ -259,14 +259,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LerXML.exe" size="596416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LerXML.exe" size="747968">
       <assemblyIdentity name="LerXML" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>u/t4pZp1kzyf8lhTur9Z1dnZv7NgR8ZPzuwplfaV4UM=</dsig:DigestValue>
+        <dsig:DigestValue>UWut2HBngNlW5g/FFyjqyl8qqt4LyY+UKmwZ2qpNb+0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -927,22 +927,22 @@
       <dsig:DigestValue>3DnO4J4LymqgMSdv3aLGBxr2tKLgXDTSo9VmRgq8ffg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LerXML.exe.config" size="780">
+  <file name="LerXML.exe.config" size="791">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>1LaVbJy0Pd18U6KU2sRB5K93i8GABmGqfwsdit3JJGE=</dsig:DigestValue>
+      <dsig:DigestValue>p3/vPBt/uy0APXx0pRAsVmIQfr/h5jdMid+YIsmO0Jw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LerXML.mdb" size="11505664" writeableType="applicationData">
+  <file name="LerXML.mdb" size="94285824" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>69Ad4JE4Gw8xZal/CzAUK6CCeWZhxQVJ4dR7VyJ1fHk=</dsig:DigestValue>
+      <dsig:DigestValue>/Y2bqBdNBwZVA9DsXmWYnpGCJqet38wfzgBATSG5Xj8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2309">

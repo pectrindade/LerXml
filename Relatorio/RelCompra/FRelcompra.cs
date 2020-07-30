@@ -15,7 +15,6 @@ namespace LerXML.Relatorio.RelCompra
             reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
             reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             reportViewer1.ZoomPercent = 100;
-           
 
             // TODO: esta linha de código carrega dados na tabela 'DsRelcompra.RelCompra'. Você pode movê-la ou removê-la conforme necessário.
             this.RelCompraTableAdapter.Fill(this.DsRelcompra.RelCompra);
