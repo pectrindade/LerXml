@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+  </configSections>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.1" />
+  </startup>
+  <connectionStrings>
+      <add name="MinhaStringAccess" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\LerXML.mdb" />
+      <add name="LerXML.Properties.Settings.LerXMLConnectionString" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\LerXML.mdb" providerName="System.Data.OleDb" />
+      <add name="LerXML.Properties.Settings.LerXMLConnectionString1" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\LerXML.mdb" providerName="System.Data.OleDb" />
+  </connectionStrings>
+</configuration>

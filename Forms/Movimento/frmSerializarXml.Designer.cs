@@ -87,22 +87,28 @@
             this.btnCompra = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.cmbDestinatario = new System.Windows.Forms.ComboBox();
-            this.cmbEmitente = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CmbSeleciona = new System.Windows.Forms.ComboBox();
+            this.PnChave = new System.Windows.Forms.Panel();
             this.txtChave = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.PnNCM = new System.Windows.Forms.Panel();
+            this.txtNcm = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PnDestinatario = new System.Windows.Forms.Panel();
+            this.cmbDestinatario = new System.Windows.Forms.ComboBox();
             this.txtDestcnpj = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.PnEmitente = new System.Windows.Forms.Panel();
+            this.cmbEmitente = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmicnpj = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.txtDataFinal = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtDataInicial = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtEmicnpj = new System.Windows.Forms.TextBox();
-            this.txtNcm = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Grid = new System.Windows.Forms.DataGridView();
@@ -119,12 +125,6 @@
             this.DestNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.button2 = new System.Windows.Forms.Button();
-            this.PnEmitente = new System.Windows.Forms.Panel();
-            this.PnDestinatario = new System.Windows.Forms.Panel();
-            this.PnNCM = new System.Windows.Forms.Panel();
-            this.PnChave = new System.Windows.Forms.Panel();
-            this.CmbSeleciona = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tbDestinatario.SuspendLayout();
             this.gbEnderecoDestinatario.SuspendLayout();
             this.gbEnderecoEmitente.SuspendLayout();
@@ -132,13 +132,13 @@
             this.tbIdentificacao.SuspendLayout();
             this.tbEmitente.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.PnChave.SuspendLayout();
+            this.PnNCM.SuspendLayout();
+            this.PnDestinatario.SuspendLayout();
+            this.PnEmitente.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tabControl2.SuspendLayout();
-            this.PnEmitente.SuspendLayout();
-            this.PnDestinatario.SuspendLayout();
-            this.PnNCM.SuspendLayout();
-            this.PnChave.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbDestinatario
@@ -768,25 +768,40 @@
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // cmbDestinatario
+            // label7
             // 
-            this.cmbDestinatario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDestinatario.FormattingEnabled = true;
-            this.cmbDestinatario.Location = new System.Drawing.Point(3, 18);
-            this.cmbDestinatario.Name = "cmbDestinatario";
-            this.cmbDestinatario.Size = new System.Drawing.Size(474, 21);
-            this.cmbDestinatario.TabIndex = 47;
-            this.cmbDestinatario.SelectedValueChanged += new System.EventHandler(this.cmbDestinatario_SelectedValueChanged);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "Selecionar Por";
             // 
-            // cmbEmitente
+            // CmbSeleciona
             // 
-            this.cmbEmitente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmitente.FormattingEnabled = true;
-            this.cmbEmitente.Location = new System.Drawing.Point(3, 21);
-            this.cmbEmitente.Name = "cmbEmitente";
-            this.cmbEmitente.Size = new System.Drawing.Size(474, 21);
-            this.cmbEmitente.TabIndex = 46;
-            this.cmbEmitente.SelectedValueChanged += new System.EventHandler(this.cmbEmitente_SelectedValueChanged);
+            this.CmbSeleciona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbSeleciona.FormattingEnabled = true;
+            this.CmbSeleciona.Items.AddRange(new object[] {
+            "--SELECIONE--",
+            "Emitente",
+            "Destinatario",
+            "NCM",
+            "Chave"});
+            this.CmbSeleciona.Location = new System.Drawing.Point(15, 26);
+            this.CmbSeleciona.Name = "CmbSeleciona";
+            this.CmbSeleciona.Size = new System.Drawing.Size(474, 21);
+            this.CmbSeleciona.TabIndex = 52;
+            this.CmbSeleciona.TextChanged += new System.EventHandler(this.CmbSeleciona_TextChanged);
+            // 
+            // PnChave
+            // 
+            this.PnChave.Controls.Add(this.txtChave);
+            this.PnChave.Controls.Add(this.label6);
+            this.PnChave.Enabled = false;
+            this.PnChave.Location = new System.Drawing.Point(13, 200);
+            this.PnChave.Name = "PnChave";
+            this.PnChave.Size = new System.Drawing.Size(591, 45);
+            this.PnChave.TabIndex = 51;
             // 
             // txtChave
             // 
@@ -804,6 +819,60 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "Chave";
             // 
+            // PnNCM
+            // 
+            this.PnNCM.Controls.Add(this.txtNcm);
+            this.PnNCM.Controls.Add(this.label1);
+            this.PnNCM.Enabled = false;
+            this.PnNCM.Location = new System.Drawing.Point(13, 152);
+            this.PnNCM.Name = "PnNCM";
+            this.PnNCM.Size = new System.Drawing.Size(591, 45);
+            this.PnNCM.TabIndex = 50;
+            // 
+            // txtNcm
+            // 
+            this.txtNcm.Location = new System.Drawing.Point(3, 22);
+            this.txtNcm.Name = "txtNcm";
+            this.txtNcm.Size = new System.Drawing.Size(195, 20);
+            this.txtNcm.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "NCM";
+            // 
+            // PnDestinatario
+            // 
+            this.PnDestinatario.Controls.Add(this.cmbDestinatario);
+            this.PnDestinatario.Controls.Add(this.txtDestcnpj);
+            this.PnDestinatario.Controls.Add(this.label5);
+            this.PnDestinatario.Enabled = false;
+            this.PnDestinatario.Location = new System.Drawing.Point(12, 102);
+            this.PnDestinatario.Name = "PnDestinatario";
+            this.PnDestinatario.Size = new System.Drawing.Size(591, 45);
+            this.PnDestinatario.TabIndex = 49;
+            // 
+            // cmbDestinatario
+            // 
+            this.cmbDestinatario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDestinatario.FormattingEnabled = true;
+            this.cmbDestinatario.Location = new System.Drawing.Point(3, 18);
+            this.cmbDestinatario.Name = "cmbDestinatario";
+            this.cmbDestinatario.Size = new System.Drawing.Size(474, 21);
+            this.cmbDestinatario.TabIndex = 47;
+            this.cmbDestinatario.SelectedValueChanged += new System.EventHandler(this.cmbDestinatario_SelectedValueChanged);
+            // 
+            // txtDestcnpj
+            // 
+            this.txtDestcnpj.Location = new System.Drawing.Point(319, 18);
+            this.txtDestcnpj.Name = "txtDestcnpj";
+            this.txtDestcnpj.Size = new System.Drawing.Size(124, 20);
+            this.txtDestcnpj.TabIndex = 38;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -813,12 +882,42 @@
             this.label5.TabIndex = 39;
             this.label5.Text = "Destinatário";
             // 
-            // txtDestcnpj
+            // PnEmitente
             // 
-            this.txtDestcnpj.Location = new System.Drawing.Point(319, 18);
-            this.txtDestcnpj.Name = "txtDestcnpj";
-            this.txtDestcnpj.Size = new System.Drawing.Size(124, 20);
-            this.txtDestcnpj.TabIndex = 38;
+            this.PnEmitente.Controls.Add(this.cmbEmitente);
+            this.PnEmitente.Controls.Add(this.label2);
+            this.PnEmitente.Controls.Add(this.txtEmicnpj);
+            this.PnEmitente.Enabled = false;
+            this.PnEmitente.Location = new System.Drawing.Point(13, 53);
+            this.PnEmitente.Name = "PnEmitente";
+            this.PnEmitente.Size = new System.Drawing.Size(591, 45);
+            this.PnEmitente.TabIndex = 48;
+            // 
+            // cmbEmitente
+            // 
+            this.cmbEmitente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmitente.FormattingEnabled = true;
+            this.cmbEmitente.Location = new System.Drawing.Point(3, 21);
+            this.cmbEmitente.Name = "cmbEmitente";
+            this.cmbEmitente.Size = new System.Drawing.Size(474, 21);
+            this.cmbEmitente.TabIndex = 46;
+            this.cmbEmitente.SelectedValueChanged += new System.EventHandler(this.cmbEmitente_SelectedValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Emitente";
+            // 
+            // txtEmicnpj
+            // 
+            this.txtEmicnpj.Location = new System.Drawing.Point(302, 21);
+            this.txtEmicnpj.Name = "txtEmicnpj";
+            this.txtEmicnpj.Size = new System.Drawing.Size(124, 20);
+            this.txtEmicnpj.TabIndex = 30;
             // 
             // label4
             // 
@@ -870,38 +969,6 @@
             this.txtDataInicial.TabIndex = 32;
             this.txtDataInicial.ValidatingType = typeof(System.DateTime);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Emitente";
-            // 
-            // txtEmicnpj
-            // 
-            this.txtEmicnpj.Location = new System.Drawing.Point(302, 21);
-            this.txtEmicnpj.Name = "txtEmicnpj";
-            this.txtEmicnpj.Size = new System.Drawing.Size(124, 20);
-            this.txtEmicnpj.TabIndex = 30;
-            // 
-            // txtNcm
-            // 
-            this.txtNcm.Location = new System.Drawing.Point(3, 22);
-            this.txtNcm.Name = "txtNcm";
-            this.txtNcm.Size = new System.Drawing.Size(195, 20);
-            this.txtNcm.TabIndex = 28;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "NCM";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(19, 299);
@@ -940,7 +1007,7 @@
             this.DestNome});
             this.Grid.Location = new System.Drawing.Point(8, 17);
             this.Grid.Name = "Grid";
-            this.Grid.Size = new System.Drawing.Size(1209, 262);
+            this.Grid.Size = new System.Drawing.Size(1209, 307);
             this.Grid.TabIndex = 17;
             // 
             // nfe
@@ -1018,74 +1085,8 @@
             this.button2.TabIndex = 20;
             this.button2.Text = "formload";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // PnEmitente
-            // 
-            this.PnEmitente.Controls.Add(this.cmbEmitente);
-            this.PnEmitente.Controls.Add(this.label2);
-            this.PnEmitente.Controls.Add(this.txtEmicnpj);
-            this.PnEmitente.Enabled = false;
-            this.PnEmitente.Location = new System.Drawing.Point(13, 53);
-            this.PnEmitente.Name = "PnEmitente";
-            this.PnEmitente.Size = new System.Drawing.Size(591, 45);
-            this.PnEmitente.TabIndex = 48;
-            // 
-            // PnDestinatario
-            // 
-            this.PnDestinatario.Controls.Add(this.cmbDestinatario);
-            this.PnDestinatario.Controls.Add(this.txtDestcnpj);
-            this.PnDestinatario.Controls.Add(this.label5);
-            this.PnDestinatario.Enabled = false;
-            this.PnDestinatario.Location = new System.Drawing.Point(12, 102);
-            this.PnDestinatario.Name = "PnDestinatario";
-            this.PnDestinatario.Size = new System.Drawing.Size(591, 45);
-            this.PnDestinatario.TabIndex = 49;
-            // 
-            // PnNCM
-            // 
-            this.PnNCM.Controls.Add(this.txtNcm);
-            this.PnNCM.Controls.Add(this.label1);
-            this.PnNCM.Enabled = false;
-            this.PnNCM.Location = new System.Drawing.Point(13, 152);
-            this.PnNCM.Name = "PnNCM";
-            this.PnNCM.Size = new System.Drawing.Size(591, 45);
-            this.PnNCM.TabIndex = 50;
-            // 
-            // PnChave
-            // 
-            this.PnChave.Controls.Add(this.txtChave);
-            this.PnChave.Controls.Add(this.label6);
-            this.PnChave.Enabled = false;
-            this.PnChave.Location = new System.Drawing.Point(13, 200);
-            this.PnChave.Name = "PnChave";
-            this.PnChave.Size = new System.Drawing.Size(591, 45);
-            this.PnChave.TabIndex = 51;
-            // 
-            // CmbSeleciona
-            // 
-            this.CmbSeleciona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbSeleciona.FormattingEnabled = true;
-            this.CmbSeleciona.Items.AddRange(new object[] {
-            "--SELECIONE--",
-            "Emitente",
-            "Destinatario",
-            "NCM",
-            "Chave"});
-            this.CmbSeleciona.Location = new System.Drawing.Point(15, 26);
-            this.CmbSeleciona.Name = "CmbSeleciona";
-            this.CmbSeleciona.Size = new System.Drawing.Size(474, 21);
-            this.CmbSeleciona.TabIndex = 52;
-            this.CmbSeleciona.TextChanged += new System.EventHandler(this.CmbSeleciona_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 13);
-            this.label7.TabIndex = 53;
-            this.label7.Text = "Selecionar Por";
             // 
             // frmSerializarXml
             // 
@@ -1118,17 +1119,17 @@
             this.tbEmitente.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.PnChave.ResumeLayout(false);
+            this.PnChave.PerformLayout();
+            this.PnNCM.ResumeLayout(false);
+            this.PnNCM.PerformLayout();
+            this.PnDestinatario.ResumeLayout(false);
+            this.PnDestinatario.PerformLayout();
+            this.PnEmitente.ResumeLayout(false);
+            this.PnEmitente.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tabControl2.ResumeLayout(false);
-            this.PnEmitente.ResumeLayout(false);
-            this.PnEmitente.PerformLayout();
-            this.PnDestinatario.ResumeLayout(false);
-            this.PnDestinatario.PerformLayout();
-            this.PnNCM.ResumeLayout(false);
-            this.PnNCM.PerformLayout();
-            this.PnChave.ResumeLayout(false);
-            this.PnChave.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

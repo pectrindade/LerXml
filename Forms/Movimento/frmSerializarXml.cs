@@ -217,8 +217,8 @@ namespace LerXML.Forms.Movimento
             //Executa função GetFile(Lista os arquivos desejados de acordo com o parametro)
             FileInfo[] Arquivos = diretorio.GetFiles("*.xml");
 
-            //System.Threading.Thread tFormAguarde = new System.Threading.Thread(new System.Threading.ThreadStart(CarregaFormAguarde));
-            //tFormAguarde.Start();
+            System.Threading.Thread tFormAguarde = new System.Threading.Thread(new System.Threading.ThreadStart(CarregaFormAguarde));
+            tFormAguarde.Start();
 
             //Começamos a listar os arquivos
             foreach (FileInfo fileinfo in Arquivos)
@@ -249,20 +249,20 @@ namespace LerXML.Forms.Movimento
             CarregaCmbEmitente();
             CarregaCmbDestinatario();
 
-            //tFormAguarde.Abort();
+            tFormAguarde.Abort();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             try
             {
-                //System.Threading.Thread tFormAguarde = new System.Threading.Thread(new System.Threading.ThreadStart(CarregaFormAguarde));
-                //tFormAguarde.Start();
+                System.Threading.Thread tFormAguarde = new System.Threading.Thread(new System.Threading.ThreadStart(CarregaFormAguarde));
+                tFormAguarde.Start();
 
                 Relatorio1();
 
 
-                //tFormAguarde.Abort();
+                tFormAguarde.Abort();
             }
             catch (Exception ex)
             {
